@@ -1,0 +1,51 @@
+package JFS.Shop;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyBook {
+       public int bookid;
+       
+       
+//       ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+//       MyBook obj=context.getBean(MyBook.class);
+       
+       @Autowired
+       public MyFavBooks myFavBooks;
+       
+       @Value("{myFavBooks.author?.toUpperCase()}")
+       public String publisher;
+       
+       public int getBookid() {
+		return bookid;
+	}
+
+
+
+	public void setBookid(int bookid) {
+		this.bookid = bookid;
+	}
+
+
+
+	public MyFavBooks getMyFavBooks() {
+		return myFavBooks;
+	}
+
+
+
+	public void setMyFavBooks(MyFavBooks myFavBooks) {
+		this.myFavBooks = myFavBooks;
+	}
+
+
+
+	public void show() {
+    	   System.out.println("My book class method");
+       }
+
+
+	
+}

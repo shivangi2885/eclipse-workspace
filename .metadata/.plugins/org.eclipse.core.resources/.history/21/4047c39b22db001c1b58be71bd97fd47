@@ -1,0 +1,8 @@
+package JFS.Shop;
+
+public class MyBook {
+       public int bookid;
+       public void show() {
+    	   System.out.println("My book class method");
+       }
+}

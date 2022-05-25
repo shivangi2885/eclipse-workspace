@@ -1,0 +1,19 @@
+package JFS.Shop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+@EnableAspectAutoProxy
+
+public class BookAOP {
+	
+	@Before(value="execution(public void show()")
+	public void beforeShow() {
+		System.out.println("Method Name : Show()");
+		System.out.println("No parameter passed");
+		System.out.println("doest return any value ");
+	}
+
+}

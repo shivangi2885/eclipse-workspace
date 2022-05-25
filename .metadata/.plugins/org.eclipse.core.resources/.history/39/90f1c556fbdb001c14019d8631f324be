@@ -1,0 +1,23 @@
+package com.example.mypkg;
+
+public class Home {
+
+	 @RestController
+	 @RequestMapping("myapp")
+	 
+	 public class Home{
+		 
+		 @Value("${server.port}")
+		 public String port;
+		 
+		 @GetMapping("/demo")
+		 public String getdemo() {
+			 return port;
+		 }
+		 
+		 @GetMapping("/demo/next")
+		 public String getSecPage() {
+			 return "second page";
+		 }
+	 }
+}

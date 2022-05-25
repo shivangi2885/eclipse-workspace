@@ -1,0 +1,10 @@
+package JFS.Shop;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyBook {
+       public int bookid;
+       public void show() {
+    	   System.out.println("My book class method");
+       }
+}

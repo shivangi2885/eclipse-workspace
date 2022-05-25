@@ -1,0 +1,5 @@
+package JFS.Shop;
+
+public class MyBook {
+       public int bookid;
+}

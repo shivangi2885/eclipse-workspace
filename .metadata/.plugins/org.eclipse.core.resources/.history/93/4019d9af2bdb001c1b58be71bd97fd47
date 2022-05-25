@@ -1,0 +1,9 @@
+package JFS.Shop;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class MyFavBooks {
+
+}
